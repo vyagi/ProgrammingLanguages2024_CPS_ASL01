@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry.Tests", "Geometry.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvoiceAplication", "InvoiceAplication\InvoiceAplication.csproj", "{EC0FFF5D-15AE-44A1-A9F2-CD7AC8487E7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceApplication.BusinessLogic", "InvoiceApplication.BusinessLogic\InvoiceApplication.BusinessLogic.csproj", "{2684C4A3-A8F4-4370-8B5B-0237A0918B04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceApplication.BusinessLogic.Tests", "InvoiceApplication.BusinessLogic.Tests\InvoiceApplication.BusinessLogic.Tests.csproj", "{146DF194-1CBF-40F3-83F7-BE358F0CAF53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{EC0FFF5D-15AE-44A1-A9F2-CD7AC8487E7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC0FFF5D-15AE-44A1-A9F2-CD7AC8487E7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC0FFF5D-15AE-44A1-A9F2-CD7AC8487E7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2684C4A3-A8F4-4370-8B5B-0237A0918B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2684C4A3-A8F4-4370-8B5B-0237A0918B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2684C4A3-A8F4-4370-8B5B-0237A0918B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2684C4A3-A8F4-4370-8B5B-0237A0918B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{146DF194-1CBF-40F3-83F7-BE358F0CAF53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{146DF194-1CBF-40F3-83F7-BE358F0CAF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{146DF194-1CBF-40F3-83F7-BE358F0CAF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{146DF194-1CBF-40F3-83F7-BE358F0CAF53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
