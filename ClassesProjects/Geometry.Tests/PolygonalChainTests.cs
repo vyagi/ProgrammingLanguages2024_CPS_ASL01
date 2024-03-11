@@ -28,9 +28,13 @@ namespace Geometry.Tests
 
             polygonalChain.AddMidpoint(new Point(2, 3));
             
+            Action addingStartingPointAgain = () => polygonalChain.AddMidpoint(new Point(1, 1));
             Action addingMidpointAgain = () => polygonalChain.AddMidpoint(new Point(2, 3));
+            Action addingEndingPointAgain = () => polygonalChain.AddMidpoint(new Point(3, 5));
 
+            addingStartingPointAgain.Should().Throw<ArgumentException>();
             addingMidpointAgain.Should().Throw<ArgumentException>();
+            addingEndingPointAgain.Should().Throw<ArgumentException>();
         }
     }
 }
