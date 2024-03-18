@@ -1,6 +1,6 @@
 ﻿List<int> numbers1 = new List<int> { 2, 5, 10, 12, 5, 1, 12, 2, 10, 11, 4 };
 
-var bigNumbers = numbers1.Where(x => x > 10).ToArray();
+var bigNumbers = numbers1.Where(x => x > 10);
 
 numbers1.Add(50);
 
