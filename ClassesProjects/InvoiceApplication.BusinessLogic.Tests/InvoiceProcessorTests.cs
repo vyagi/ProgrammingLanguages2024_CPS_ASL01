@@ -1,4 +1,5 @@
 using FluentAssertions;
+using InvoiceApplication.BusinessLogic.Tests.Tools;
 
 namespace InvoiceApplication.BusinessLogic.Tests
 {
@@ -23,11 +24,11 @@ namespace InvoiceApplication.BusinessLogic.Tests
             categorized.First().Category.Should().Be("Food");
             categorized.First().Amount.Should().Be(3100);
             
-            categorized.Skip(1).First().Category.Should().Be("Toys");
-            categorized.Skip(1).First().Amount.Should().Be(2500);
+            categorized.Second().Category.Should().Be("Toys");
+            categorized.Second().Amount.Should().Be(2500);
 
-            categorized.Skip(2).First().Category.Should().Be("Equipment");
-            categorized.Skip(2).First().Amount.Should().Be(50000);
+            categorized.Third().Category.Should().Be("Equipment");
+            categorized.Third().Amount.Should().Be(50000);
         }
     }
 }

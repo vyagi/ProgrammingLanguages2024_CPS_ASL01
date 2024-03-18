@@ -1,6 +1,8 @@
-﻿namespace Geometry
+﻿using System.Collections;
+
+namespace Geometry
 {
-    public class PolygonalChain : Segment, IMoveable
+    public class PolygonalChain : Segment, IMoveable, IEnumerable<Point>
     {
         private List<Point> _midpoints = new List<Point>();
 
@@ -55,5 +57,24 @@
 
             return allPoints;
         }
+
+        public IEnumerator<Point> GetEnumerator()
+        {
+            Console.WriteLine("Get Enumerator is called for the first time");
+            yield return _start;
+            
+            Console.WriteLine("_start was already returned, now midpoints");
+            
+            foreach (var midpoint in _midpoints)
+                yield return midpoint;
+
+            Console.WriteLine("midpoints were already returned, now _end");
+
+            yield return _end;
+
+            Console.WriteLine("_end was already returned, nothing more to return");
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

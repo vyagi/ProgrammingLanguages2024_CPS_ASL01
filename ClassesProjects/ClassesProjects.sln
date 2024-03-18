@@ -5,13 +5,15 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geometry", "Geometry\Geometry.csproj", "{9132C819-065A-492A-91C0-9F1A6759ACEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry.Tests", "Geometry.Tests\Geometry.Tests.csproj", "{833FA381-896D-44B6-885C-8971AE2C8DF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geometry.Tests", "Geometry.Tests\Geometry.Tests.csproj", "{833FA381-896D-44B6-885C-8971AE2C8DF2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvoiceAplication", "InvoiceAplication\InvoiceAplication.csproj", "{EC0FFF5D-15AE-44A1-A9F2-CD7AC8487E7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceApplication.BusinessLogic", "InvoiceApplication.BusinessLogic\InvoiceApplication.BusinessLogic.csproj", "{2684C4A3-A8F4-4370-8B5B-0237A0918B04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvoiceApplication.BusinessLogic", "InvoiceApplication.BusinessLogic\InvoiceApplication.BusinessLogic.csproj", "{2684C4A3-A8F4-4370-8B5B-0237A0918B04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceApplication.BusinessLogic.Tests", "InvoiceApplication.BusinessLogic.Tests\InvoiceApplication.BusinessLogic.Tests.csproj", "{146DF194-1CBF-40F3-83F7-BE358F0CAF53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvoiceApplication.BusinessLogic.Tests", "InvoiceApplication.BusinessLogic.Tests\InvoiceApplication.BusinessLogic.Tests.csproj", "{146DF194-1CBF-40F3-83F7-BE358F0CAF53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqTutorial", "LinqTutorial\LinqTutorial.csproj", "{34040968-1F08-4750-8B36-9EDEED546BE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{146DF194-1CBF-40F3-83F7-BE358F0CAF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{146DF194-1CBF-40F3-83F7-BE358F0CAF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{146DF194-1CBF-40F3-83F7-BE358F0CAF53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34040968-1F08-4750-8B36-9EDEED546BE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34040968-1F08-4750-8B36-9EDEED546BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34040968-1F08-4750-8B36-9EDEED546BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34040968-1F08-4750-8B36-9EDEED546BE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
