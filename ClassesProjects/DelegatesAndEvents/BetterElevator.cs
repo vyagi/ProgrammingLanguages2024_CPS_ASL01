@@ -9,6 +9,9 @@
             CurrentFloor = currentFloor;
         }
     }
+    //Expand BetterElevator: add Elevator status, add kind of floor (intermediary or destination), include this 
+    //information in the FloorReachedEventArgs
+
 
     public class BetterElevator
     {

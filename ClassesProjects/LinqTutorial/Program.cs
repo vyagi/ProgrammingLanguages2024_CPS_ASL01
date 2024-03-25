@@ -1,15 +1,24 @@
-﻿List<int> numbers1 = new List<int> { 2, 5, 10, 12, 5, 1, 12, 2, 10, 11, 4 };
+﻿List<int> numbers1 = new List<int> { 2, 5, 10, 12, 5, 1, 12, 2, 10, 11, 4, 100 };
 
-var bigNumbers = numbers1.Where(x => x > 10);
+//var bigNumbers = numbers1.Where(x => x > 10);
 
-numbers1.Add(50);
+//numbers1.Add(50);
 
-foreach (var item in bigNumbers)
-{
-    Console.WriteLine(item);
-}
+//foreach (var item in bigNumbers)
+//{
+//    Console.WriteLine(item);
+//}
 
+//var result1 = numbers1.Aggregate((x,y) => x + y);
+//Console.WriteLine(result1);
 
+//var result2 = numbers1.Aggregate(10,(x,y) => x + y);
+//Console.WriteLine(result2);
+
+//var result3 = numbers1.Aggregate((x, y) => x * y);
+//Console.WriteLine(result3);
+
+//Homework - return from Aggregate a list of numbers which are bigger then average;
 
 var persons = new Person[] {
     new Person(1, "James", "Bond", 40, new [] { "Spying", "Women", "Cars" }),
@@ -30,6 +39,72 @@ var addresses = new Address[] {
     new Address(100, -1, "Moon", "Dark side", TypeOfAddress.Home),
     new Address(100, -1, "Sun", "Gas", TypeOfAddress.Temporary),
 };
+
+//Joins
+var query = from person in persons
+            where person.Age < 70 && person.Hobbies.Count() > 2
+            orderby person.LastName descending
+            select new { FullName = $"{person.LastName} {person.FirstName}" };
+
+var crappySyntax =
+    from person in persons
+    from address in addresses
+    where person.Id == address.PersonId
+    select new { person, address };
+
+var joiningPersonAndAddress =
+    from person in persons
+    join address in addresses on person.Id equals address.PersonId
+    select new { person, address };
+
+//foreach (var item in joiningPersonAndAddress)
+//{
+//    Console.WriteLine(item.person.LastName + " " + item.address.City);
+//}
+
+var groupJoined =
+    from person in persons
+    join address in addresses on person.Id equals address.PersonId into personAddresses
+    select new { Person = person, Addresses = personAddresses };
+
+foreach (var item in groupJoined)
+{
+    Console.WriteLine(item.Person.FirstName + " " + item.Person.LastName);
+    foreach (var address in item.Addresses)
+    {
+        Console.WriteLine(address.City);
+    }
+}
+
+
+
+
+//This is anonymous types usage:
+//var zx  = persons.Select(x => new {Age = x.Age, FullName = $"{x.FirstName} {x.LastName}" });
+//Console.WriteLine(zx.First().GetType().Name);
+
+//var listOfHobbies = persons.SelectMany(x => x.Hobbies).Distinct().ToList();
+
+//foreach (var hobby in listOfHobbies)
+//{
+//    Console.WriteLine(hobby);
+//}
+
+//var reversed = persons
+//    .SelectMany(x=>x.Hobbies, (person, hobby) => new { FullName = person.FirstName + " " + person.LastName, Hobby = hobby })
+//    .GroupBy(x=>x.Hobby)
+//    .Select(x => new { Hobby = x.Key, Persons = x.ToList() })
+//    .ToList();
+
+//foreach (var item in reversed)
+//{
+//    Console.WriteLine($"{item.Hobby}");
+//    foreach (var name in item.Persons)
+//    {
+//        Console.WriteLine(name);
+//    }
+//}
+
 
 //var byHobbies = persons.GroupBy(x => x.Hobbies.Length).OrderBy(x=>x.Key);
 
