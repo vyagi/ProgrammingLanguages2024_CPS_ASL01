@@ -28,9 +28,9 @@ namespace DelegatesAndEvents
     //Extending this class will be your homework, so couple of things 
     //I will do just temporarily
 
-    //this old school way is not much used nowadays 
+    //////this old school way is not much used nowadays 
     //public delegate double IntegrableFunction(double x);
-    //because we have Func and Action
+    //////because we have Func and Action
 
     public class Integrator
     {
