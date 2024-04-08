@@ -76,7 +76,7 @@ internal class Program
 
 
     }
-    
+     
 
     string WaterState(int tempInFahrenheit) =>
     tempInFahrenheit switch
